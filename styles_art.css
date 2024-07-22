@@ -1,0 +1,30 @@
+.art-content-wrapper
+{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    padding-top: 0px;
+    background-color: white;
+    align-items: flex-start;
+}
+
+.item
+{
+    margin: 15px;
+    margin-top: 0px;
+}
+
+.flex-box-1
+{
+    display: flex;
+    flex-direction: column;
+    width: 930px;
+}
+
+.flex-box-2
+{
+    display:flex;
+    width: 850px;
+    flex-direction: column;
+}

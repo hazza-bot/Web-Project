@@ -1,0 +1,184 @@
+/*master styles */
+body
+{
+    margin: 0px;
+}
+
+.container
+{
+    display:grid;
+    grid-template-columns: 1fr;
+
+}
+
+/*nav styles */
+.nav-wrapper
+{
+    display: flex;
+    justify-content: space-between; 
+    padding: 50px;
+}
+
+.left-side
+{
+    display: flex;
+    margin-left: 50px;
+}
+
+.nav-wrapper > .left-side > div
+{
+    margin-right: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper
+{
+    height:22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a
+{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover
+{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover
+{
+    color: black;
+}
+
+/* portfolio styles */
+
+.portfolio-items-wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.portfolio-item-wrapper
+{
+    position:relative;
+
+}
+
+.portfolio-image-background
+{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-text
+{
+    position:absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 633.66px;
+}
+
+
+.Header
+{
+    text-transform: uppercase;
+    font-size: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: white;
+    text-align: center;
+    
+}
+
+.Header a
+{
+    text-decoration: none;
+}
+
+.subtitle
+{
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: 600;
+    color: transparent;
+    transition: 1s;
+    text-align: center;
+}
+
+.image-text:hover .subtitle
+{
+    color:lightseagreen;
+}
+
+.img-darken
+{
+    transition: 1s;
+    filter: brightness(20%);
+}
+
+/*footer styles */
+ .footer-wrapper
+ {
+    display: flex;
+    justify-content: space-between; 
+    padding: 25px;
+ }
+
+.right_side
+{
+    display: flex;
+}
+
+.Social-Media
+{
+    margin-right: 10px;
+}
+
+ /* icon styles */
+ .fa
+ {
+    padding: 10px;
+    font-size: 10px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+ }
+
+ .fa:hover
+ {
+     opacity:0.8;
+ }
+
+ .fa-facebook
+ {
+    background: #3B5998;
+    color: white;
+ }
+
+ .fa-instagram
+ {
+    background: #125688;
+    color: white;
+ }
+
+ .fa-google 
+ {
+    background: #dd4b39;
+    color: white;
+}

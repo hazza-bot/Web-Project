@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Index page, wheree I layout the contents of the blog, additional animation such that each picture fades and presents the title upon hover">
+        <title> Page Title</title>
+        <link rel="stylesheet"  href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+
+                </div>
+
+                <div class="right-side">
+                    <div class="logo">
+                        <div> HARRY YANG</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-wrapper">
+                <div class= "portfolio-items-wrapper">
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Coding.jpg)"></div>
+
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="coding.html" style = "color:white">Coding</a>                              
+                            </div>
+
+                            <div class="subtitle">
+                                Previous and ongoing coding projects
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Stocks.jpg)"></div>
+
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="stocks.html" style = "color:white">Stocks</a>                           
+                            </div>
+
+                            <div class="subtitle">
+                                Ongoing Market trends
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Health.jpg)"></div>
+
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="Health.html" style = "color:white">Health</a>                             
+                            </div>
+
+                            <div class="subtitle">
+                                Fitness calculators and diet reviews
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Book.jpg)"></div>
+
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="books.html" style = "color:white">Books</a>                           
+                            </div>
+
+                            <div class="subtitle">
+                                Current reading list and book reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Film.jpg)"></div>
+                        
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="films.html" style = "color:white">Films</a>                              
+                            </div>
+
+                            <div class="subtitle">
+                                Current film watchlist and subsequent reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Anime.png)"></div>
+                        
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="anime.html" style = "color:white">Anime</a>                             
+                            </div>
+
+                            <div class="subtitle">
+                                Seasonal anime watchlist and reviews 
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Art.jpg)"></div>
+                        
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="art.html" style = "color:white">Art</a>                              
+                            </div>
+
+                            <div class="subtitle">
+                                Storage for sketches, cartoons and paintings
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Photography.jpg)"></div>
+
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="photography.html" style = "color:white">photography</a>                              
+                            </div>
+
+                            <div class="subtitle">
+                                Travel photography and personal photography storage
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class= "portfolio-item-wrapper">
+                        <div class= "portfolio-image-background" style= "background-image: url(images/Gaming.jpg)"></div>
+                        
+                        <div class="image-text">
+                            <div class="Header">
+                                <a href="gaming.html" style = "color:white">Gaming</a>                             
+                            </div>
+
+                            <div class="subtitle">
+                                Personal gaming preferences and reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div class="footer-wrapper">
+                <div class="left_side">
+                    <div class="nav-link-wrapper">
+                               
+                    </div>
+                </div>
+
+                <div class="right_side">
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+        portfolioItems.forEach(portfolioItem => {portfolioItem.addEventListener('mouseover', () => {portfolioItem.childNodes[1].classList.add('img-darken');})})
+
+        portfolioItems.forEach(portfolioItem => {portfolioItem.addEventListener('mouseout', () => {portfolioItem.childNodes[1].classList.remove('img-darken');})})
+
+    </script>
+</html>

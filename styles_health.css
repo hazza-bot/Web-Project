@@ -1,0 +1,16 @@
+.content-wrapper
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bmi-wrapper
+{
+    color: rgb(15, 101, 214);
+}
+
+.bmr-wrapper
+{
+    color: rgb(15, 101, 214);
+}

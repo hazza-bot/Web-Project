@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Two simple calculators I made using form submission and javascript, takes user input and returns BMI and BMR. Going to add additional articles regarding intermittent fasting soon">
+        <title> Page Title</title>
+        <link rel="stylesheet"  href="styles.css">
+        <link rel="stylesheet"  href="styles_health.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+
+                </div>
+
+                <div class="right-side">
+                    <div class="logo">
+                        <div> HARRY YANG</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-wrapper">
+                <div class="bmi-wrapper">
+                    <div class="bmi-header">
+                        Body Mass Index Caculator
+                    </div></br>
+                    
+                    <form name ="bmi-form">
+                        Gender: </br>
+                        <input type="radio" name="measurement1" id="Male1">
+                        <label for="Male">Male </label>
+                        <input type="radio" name="measurement1" id="Female1">
+                        <label for="Female">Female </label><br>
+                        </br>
+                        Measurement: </br>
+                        <input type="radio" id="metric1" name="measurement1">
+                        <label for="metric">Metric </label>
+                        <input type="radio" id="imperial1" name="measurement1">
+                        <label for="imperial">Imperial </label><br></br>
+
+                        Your Weight (kg/lb): </br> 
+                        <input type="text" id="weight1" size="10"><br /></br>
+                        Your Height (m/in): </br>
+                        <input type="text" id="height1" size="10"><br /></br>
+
+                        <input type="button" value="Calculate BMI" onClick="calculateBMI()"><br /></br>
+
+                        BMI: </br>
+                        <input type="text" id="output1" name="bmi" size="10"><br /><br />
+
+                        BMI Category: </br>
+                        <input type="text" id="output3" name="bmi" size="10"><br /><br />
+
+
+                        <input type="reset" value="Reset" />
+                    </form>
+
+                </div>
+
+                <div class="bmr-wrapper">
+                    <div class="bmr-header">
+                        Basal Metabolic Rate Caculator
+                    </div></br>
+                    
+                    <form name ="bmr-form">
+                        Gender: </br>
+                        <input type="radio" name="measurement1" id="Male2">
+                        <label for="Male">Male </label>
+                        <input type="radio" name="measurement1" id="Female2">
+                        <label for="Female">Female </label><br></br>
+
+                        Measurement: </br>
+                        <input type="radio" id="metric2" name="measurement2">
+                        <label for="metric">Metric </label>
+                        <input type="radio" id="imperial2" name="measurement2">
+                        <label for="imperial">Imperial </label><br></br>
+
+                        Age: </br>
+                        <input type="text" id="age" size="10"><br /></br>
+
+                        Your Weight (kg/lb): </br> 
+                        <input type="text" id="weight2" size="10"><br /></br>
+                        Your Height (m/in): </br>
+                        <input type="text" id="height2" size="10"><br /></br>
+
+                        <input type="button" value="Calculate BMR" onClick="calculateBMR()"><br /></br>
+
+                        BMR: </br>
+                        <input type="text" id="output2" name="bmr" size="10"> Calories<br /> </br>
+
+                        <input type="reset" value="Reset" />
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="footer-wrapper">
+                <div class="left_side">
+                    <div class="nav-link-wrapper">
+                               
+                    </div>
+                </div>
+
+                <div class="right_side">
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+
+                    <div class="Social-Media">
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+        function calculateBMI()
+        {
+            var weight = document.getElementById("weight1").value;
+            var height = document.getElementById("height1").value;
+
+            if(document.getElementById("metric1").checked) 
+            { 
+                if(height > 0 && weight > 0)
+                {
+                    var finalBMI = weight/(height*height);
+                    document.getElementById("output1").value = finalBMI.toFixed(1);
+                }
+
+                else
+                {
+                    alert("Please fill in the form correctly");
+                }
+            }    
+
+            else if(document.getElementById("imperial1").checked) 
+            { 
+                if(height > 0 && weight > 0)
+                {
+                    var finalBMI = 703* (weight/(height*height));
+                    document.getElementById("output1").value = finalBMI.toFixed(1);
+                }
+
+                else
+                {
+                    alert("Please fill in the form correctly");
+                }
+            }
+        }
+
+        function calculateBMR()
+        {
+            var weight = document.getElementById("weight2").value;
+            var height = document.getElementById("height2").value;
+            var age = document.getElementById("age").value;
+
+            if(document.getElementById("Male2").checked) 
+            { 
+                if(document.getElementById("metric2").checked)
+                {
+                    if(height > 0 && weight > 0)
+                    {
+                        var finalBMR = 66.47 + (weight * 13.75) + (height * 100 * 5.003) - (age * 6.755);
+                        document.getElementById("output2").value = finalBMR.toFixed(1);
+                    }
+
+                    else
+                    {
+                        alert("Please fill in the form correctly");
+                    }
+                }
+
+                if(document.getElementById("imperial2").checked)
+                {
+                    if(height > 0 && weight > 0)
+                    {
+                        var finalBMR = 66.47 + (weight * 6.24) + (height * 12.7) - (age * 6.755);
+                        document.getElementById("output2").value = finalBMR.toFixed(1);
+                    }
+
+                    else
+                    {
+                        alert("Please fill in the form correctly");
+                    }
+                }
+            }    
+
+            else if(document.getElementById("Female2").checked) 
+            { 
+                if(document.getElementById("metric").checked)
+                {
+                    var finalBMR = 665.1 + (weight * 9.563) + (height * 100 * 1.85) - (age * 4.676);
+                    document.getElementById("output2").value = finalBMR.toFixed(1) ;
+                }
+
+                if(document.getElementById("imperial").checked)
+                {
+                    var finalBMR = 665.1 + (weight * 4.35) + (height * 4.7) - (age * 4.676);
+                    document.getElementById("output2").value = finalBMR.toFixed(1) ;
+                }
+            }
+
+            else
+            {
+                alert("please tick relevant buttons")
+            }
+        }
+    </script>
+</html>
